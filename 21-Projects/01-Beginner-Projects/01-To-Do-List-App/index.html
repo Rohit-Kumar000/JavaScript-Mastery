@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="todo-container">
+
+        <!-- Header -->
+        <header class="todo-header">
+
+            <div>
+                <p class="eyebrow">MY TASKS</p>
+
+                <h1>To-Do List</h1>
+
+                <p class="subtitle">
+                    Stay organized and get things done.
+                </p>
+            </div>
+
+            <div class="task-summary">
+                <span id="task-count">0</span>
+                <small>Tasks</small>
+            </div>
+
+        </header>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What needs to be done?"
+            >
+
+            <button id="add-btn">
+                <span>+</span>
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Main Tasks -->
+        <section class="task-section">
+
+            <div id="task-list" class="task-list"></div>
+
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h2>No tasks yet</h2>
+
+                <p>
+                    Add your first task and start getting things done.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="todo-footer">
+
+            <span>
+                <strong id="completed-count">0</strong>
+                completed
+            </span>
+
+            <button id="trash-btn">
+                🗑 View Deleted
+            </button>
+
+        </footer>
+
+
+        <!-- Deleted Tasks -->
+        <section id="trash-section" class="trash-section hidden">
+
+            <div class="trash-header">
+
+                <div>
+                    <p class="eyebrow">TRASH</p>
+
+                    <h2>Deleted Tasks</h2>
+                </div>
+
+                <button id="back-btn">
+                    ← Back
+                </button>
+
+            </div>
+
+
+            <div id="deleted-list" class="deleted-list"></div>
+
+
+            <!-- Empty Trash -->
+            <div id="empty-trash" class="empty-trash">
+
+                <div class="trash-icon">
+                    🗑
+                </div>
+
+                <h3>Trash is empty</h3>
+
+                <p>
+                    Deleted tasks will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
