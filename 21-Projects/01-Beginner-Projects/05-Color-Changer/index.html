@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="color-app">
+
+        <div class="color-card">
+
+            <div class="card-header">
+                <p class="tag">JAVASCRIPT PROJECT</p>
+                <h1>Color Changer</h1>
+                <p class="subtitle">
+                    Change the background color and experiment with different colors.
+                </p>
+            </div>
+
+            <div class="color-preview" id="colorPreview">
+                <span id="colorCode">#F5F5F5</span>
+            </div>
+
+            <div class="color-info">
+                <p>Current Color</p>
+                <h2 id="currentColor">#F5F5F5</h2>
+            </div>
+
+            <div class="buttons">
+                <button class="btn primary" id="changeColor">
+                    Change Color
+                </button>
+
+                <button class="btn secondary" id="resetColor">
+                    Reset
+                </button>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="swatch-section">
+                <h3>Quick Colors</h3>
+
+                <div class="swatches">
+                    <button class="swatch red" data-color="#EF4444"></button>
+                    <button class="swatch blue" data-color="#3B82F6"></button>
+                    <button class="swatch green" data-color="#22C55E"></button>
+                    <button class="swatch purple" data-color="#8B5CF6"></button>
+                    <button class="swatch orange" data-color="#F97316"></button>
+                    <button class="swatch pink" data-color="#EC4899"></button>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="footer-text">
+            Built while learning JavaScript
+        </p>
+
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
