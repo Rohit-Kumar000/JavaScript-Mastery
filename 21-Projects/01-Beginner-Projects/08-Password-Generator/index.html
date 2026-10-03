@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="password-box">
+
+            <h1>Password Generator</h1>
+
+            <p class="subtitle">
+                Create a strong and secure password
+            </p>
+
+            <!-- Password Display -->
+            <div class="password-display">
+
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Your password will appear here"
+                    readonly
+                >
+
+                <button id="copyBtn" title="Copy Password">
+                    Copy
+                </button>
+
+            </div>
+
+            <!-- Password Length -->
+            <div class="setting">
+
+                <div class="setting-header">
+                    <label for="length">Password Length</label>
+
+                    <span id="lengthValue">12</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="length"
+                    min="4"
+                    max="32"
+                    value="12"
+                >
+
+            </div>
+
+            <!-- Options -->
+            <div class="options">
+
+                <label class="option">
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked
+                    >
+
+                    <span>Uppercase Letters</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked
+                    >
+
+                    <span>Lowercase Letters</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked
+                    >
+
+                    <span>Numbers</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                    >
+
+                    <span>Symbols</span>
+                </label>
+
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn" class="generate-btn">
+                Generate Password
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
