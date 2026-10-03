@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f6fb;
+    color: #1f2937;
+
+    padding: 20px;
+}
+
+
+/* Main Container */
+
+.quote-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* Header */
+
+.quote-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+    margin-bottom: 14px;
+
+    border-radius: 20px;
+
+    background: #e8edff;
+    color: #4f46e5;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.quote-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.quote-header p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+/* Quote Card */
+
+.quote-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 55px 50px 40px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* Quote Icon */
+
+.quote-icon {
+    position: absolute;
+
+    top: 20px;
+    left: 35px;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    color: #e0e7ff;
+
+    font-family: Georgia, serif;
+}
+
+
+/* Quote Text */
+
+.quote-text {
+    position: relative;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+    line-height: 1.6;
+
+    color: #1f2937;
+
+    margin-bottom: 25px;
+}
+
+
+/* Author */
+
+.quote-author {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.quote-author span {
+    width: 35px;
+    height: 2px;
+
+    background: #6366f1;
+}
+
+.quote-author p {
+    color: #6366f1;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* Buttons */
+
+.quote-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.quote-actions button {
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* Copy Button */
+
+.copy-btn {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.copy-btn:hover {
+    background: #e5e7eb;
+}
+
+
+/* New Quote Button */
+
+.new-quote-btn {
+    display: flex;
+
+    align-items: center;
+    gap: 9px;
+
+    background: #4f46e5;
+    color: white;
+}
+
+.new-quote-btn:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.new-quote-btn span {
+    font-size: 18px;
+}
+
+
+/* Footer */
+
+.quote-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 18px;
+
+    padding: 0 5px;
+}
+
+.quote-footer p {
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.quote-footer p span {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+
+/* Dots */
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #d1d5db;
+}
+
+.dots .active {
+    width: 18px;
+
+    border-radius: 10px;
+
+    background: #6366f1;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .quote-header h1 {
+        font-size: 34px;
+    }
+
+    .quote-card {
+        padding: 50px 25px 30px;
+    }
+
+    .quote-text {
+        font-size: 22px;
+    }
+
+    .quote-actions {
+        flex-direction: column;
+    }
+
+    .quote-actions button {
+        width: 100%;
+    }
+}
