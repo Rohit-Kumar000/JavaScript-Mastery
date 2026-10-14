@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Cine<span>Find.</span></a>
+        <p>Discover your next favorite movie 🍿</p>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="eyebrow">YOUR MOVIE DISCOVERY HUB</span>
+            <h1>Find movies worth <span>watching.</span></h1>
+            <p>Search movies, explore ratings and discover amazing stories.</p>
+
+            <form id="searchForm" class="search-box">
+                <span class="search-icon">⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movies, e.g. Inception..."
+                    aria-label="Search movies"
+                    required
+                >
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+
+            <div class="quick-search">
+                <span>Try:</span>
+                <button class="suggestion" data-query="Batman">Batman</button>
+                <button class="suggestion" data-query="Avengers">Avengers</button>
+                <button class="suggestion" data-query="Harry Potter">Harry Potter</button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="section-heading">
+                <div>
+                    <h2 id="resultsTitle">Popular Searches</h2>
+                    <p id="resultsSubtitle">Explore movies and find your next watch.</p>
+                </div>
+                <span class="result-count" id="resultCount"></span>
+            </div>
+
+            <div id="status" class="status" role="status" aria-live="polite">
+                Search for a movie to get started.
+            </div>
+
+            <div id="movieGrid" class="movie-grid"></div>
+        </section>
+    </main>
+
+    <div id="movieModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal" aria-label="Close details">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by Rohit | CineFind Movie Search App</p>
+        <p class="footer-note">Movie data provided by OMDb API.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
