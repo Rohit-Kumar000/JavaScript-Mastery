@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern shopping cart built with JavaScript." />
+  <title>ShopEase | Shopping Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Shop<span>Ease.</span></a>
+
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search"
+        placeholder="Search products..." aria-label="Search products" />
+    </div>
+
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR EVERYDAY MARKETPLACE</p>
+        <h1>Find your next<br /><span>favorite thing.</span></h1>
+        <p class="hero-text">
+          Good products. Great prices. A little something for everyone.
+        </p>
+        <a href="#products" class="shop-link">Explore products ↓</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🛍️</div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HANDPICKED FOR YOU</p>
+          <h2>Explore products</h2>
+        </div>
+        <span id="productCount">0 products</span>
+      </div>
+
+      <div class="filters">
+        <div class="category-list" id="categoryList">
+          <button class="filter active" data-category="All">All</button>
+          <button class="filter" data-category="Electronics">Electronics</button>
+          <button class="filter" data-category="Fashion">Fashion</button>
+          <button class="filter" data-category="Accessories">Accessories</button>
+        </div>
+
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="default">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="cart-section" id="cartSection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR PICKS</p>
+          <h2>Your shopping cart</h2>
+        </div>
+        <button id="clearCart" class="text-button">Clear cart</button>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-items" id="cartItems"></div>
+
+        <aside class="order-card">
+          <h3>Order summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span><strong id="subtotal">₹0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span><strong id="shipping">₹0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Tax (5%)</span><strong id="tax">₹0</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span><strong id="total">₹0</strong>
+          </div>
+          <button id="checkoutButton" class="checkout-button">
+            Proceed to checkout →
+          </button>
+          <p class="secure-note">🔒 Demo checkout · No real payment</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    <a href="#" class="logo">Shop<span>Ease.</span></a>
+    <p>Built with HTML, CSS & JavaScript.</p>
+  </footer>
+</body>
+</html>
