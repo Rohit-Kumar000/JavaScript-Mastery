@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover products with smart search and filters." />
+  <title>ShopEase — Product Search & Filter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">ShopEase<span>.</span></a>
+
+    <label class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search"
+        placeholder="Search products, brands..." />
+      <kbd>Search</kbd>
+    </label>
+
+    <div class="header-tag">SMART PRODUCT DISCOVERY</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">LESS SEARCHING. MORE DISCOVERING.</p>
+        <h1>Find what you love.<br /><span>Filter out the rest.</span></h1>
+        <p class="hero-copy">
+          Your next favorite product is just a few clicks away.
+          Explore, compare and discover.
+        </p>
+        <a class="hero-link" href="#catalog">Explore collection ↓</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span>✦</span>
+        <div class="floating-card">✨ Smart discovery</div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Discover products</h2>
+        </div>
+        <p id="resultCount" aria-live="polite">0 products found</p>
+      </div>
+
+      <div class="catalog-layout">
+        <aside class="filters-panel">
+          <div class="filter-heading">
+            <h3>Filters</h3>
+            <button id="clearFilters" class="clear-button">Reset all</button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div id="categoryFilters" class="category-options"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Price range</h4>
+            <p class="muted">Choose your budget in INR</p>
+            <div class="price-inputs">
+              <label>
+                Min ₹
+                <input id="minPrice" type="number" min="0" placeholder="0" />
+              </label>
+              <label>
+                Max ₹
+                <input id="maxPrice" type="number" min="0" placeholder="10000" />
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Minimum rating</h4>
+            <select id="ratingFilter" class="full-select">
+              <option value="0">All ratings</option>
+              <option value="4">★★★★ 4.0 and above</option>
+              <option value="4.5">★★★★★ 4.5 and above</option>
+              <option value="4.8">★★★★★ 4.8 and above</option>
+            </select>
+          </div>
+
+          <div class="filter-note">
+            <span>✦</span>
+            <p>Use multiple filters together to find exactly what you need.</p>
+          </div>
+        </aside>
+
+        <div class="results-area">
+          <div class="toolbar">
+            <p id="activeFilters">All products</p>
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+
+          <div id="activeChips" class="active-chips"></div>
+          <div id="productGrid" class="product-grid"></div>
+          <div id="emptyState" class="empty-state" hidden>
+            <div class="empty-icon">⌕</div>
+            <h3>No products found</h3>
+            <p>Try another search or adjust your filters.</p>
+            <button id="emptyReset" class="primary-button">Clear all filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">ShopEase<span>.</span></a>
+    <p>Built with HTML, CSS & Vanilla JavaScript.</p>
+  </footer>
+</body>
+</html>
